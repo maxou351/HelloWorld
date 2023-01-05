@@ -6,7 +6,7 @@ export const PEOPLE: People[] = [
         name: "Lucas",
         hp: 1,
         cp: 1,
-        picture: "",
+        picture: "assets/young-potato-isolated-on-white-260nw-1029398878.webp",
         types: ['unknown'],
         created: new Date()
     },
@@ -15,7 +15,7 @@ export const PEOPLE: People[] = [
         name: "Beryl",
         hp: 1,
         cp: 1,
-        picture: "",
+        picture: "https://fr.gravatar.com/avatar",
         types: ['unknown'],
         created: new Date()
     },
@@ -31,6 +31,15 @@ export const PEOPLE: People[] = [
     {
         id: 4,
         name: "Pauline",
+        hp: 1,
+        cp: 1,
+        picture: "",
+        types: ['unknown'],
+        created: new Date()
+    },
+    {
+        id: 5,
+        name: "Clara",
         hp: 1,
         cp: 1,
         picture: "",

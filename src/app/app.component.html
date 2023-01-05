@@ -16,11 +16,25 @@
 
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
+    <h1>{{ title }} </h1>
+  </div>
 
-    <span>{{ title }} </span>
-    <br>
-    <!-- <span>{{ PEOPLE }}</span> -->
+  <input 
+    #input
+    (keyup)="selectPeopleKeyUp(input.value)"
+    type="number"
+    (click)="selectPeopleInput($event)"
+  />
+  <p>{{ input.value }}</p>
+  <p>{{ peopleSelected?.name }}</p>
 
+  <div *ngFor="let people of peopleTable">
+    <p (click)="selectPeople(people)">
+      {{ people.name}}
+    </p>
+    <!-- <mat-toolbar></mat-toolbar>
+    <mat-icon>account_circl</mat-icon> -->
+    <img src={{people.picture}}>
   </div>
 
   <!-- Footer -->
