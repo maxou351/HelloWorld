@@ -11,23 +11,18 @@ import { PEOPLE } from './bdd-people';
 export class AppComponent implements OnInit{
   title = 'Hello';
   peopleTable: People[] = PEOPLE;
-  peopleSelected: People;
+  peopleSelected: People|undefined;
 
   ngOnInit(){
     console.table(this.peopleTable);
   }
 
-  selectPeopleInput(event: MouseEvent){
-    const index: number = +(event.target as HTMLInputElement).value;
-    console.log(`Vous avez cliqué sur le nom ${this.peopleTable[index].name}`);
-  }
-
-  selectPeople(people: People){
-    console.log(`Vous avez cliqué sur le nom ${people.name}`);
-  }
-
-  selectPeopleKeyUp(index: string){
-    const peopleId: number = +index;
-    this.peopleSelected = this.peopleTable[peopleId+1];
+  selectPeople(index: string){
+    const people: People|undefined = this.peopleTable.find(people => people.id == +index)
+    if(people){
+      this.peopleSelected = people;
+    }else {
+      this.peopleSelected = people;
+    }
   }
 }
